@@ -1,14 +1,16 @@
-/* eslint-disable prettier/prettier */
+import LottieView from 'lottie-react-native';
 import React from 'react';
-import {View, ActivityIndicator, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 
 const Loader = () => {
   return (
-    <View style={styles.loaderContainer}>
-      <ActivityIndicator
-        color="#009688"
-        size="large"
+    <View style={[styles.loaderContainer]}>
+      <Text style={[styles.loaderContainer, styles.loading]}>Loading...</Text>
+      <LottieView
+        source={require('../../Resources/Loading.json')}
         style={styles.activityIndicatorStyle}
+        autoPlay
+        loop
       />
     </View>
   );
@@ -23,6 +25,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   activityIndicatorStyle: {
-    // Additional styles for the ActivityIndicator if needed
+    width: '100%',
+    height: '100%',
+  },
+  loading: {
+    fontSize: 50,
+    color: '#000',
   },
 });
