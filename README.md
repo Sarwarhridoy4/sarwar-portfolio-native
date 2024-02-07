@@ -1,2 +1,3 @@
 # Sarwar's Portfolio
-This is App version of my Personal Portfolio.
+This is the App version of my Personal Portfolio.
+this app is Powered by React native
